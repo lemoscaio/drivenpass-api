@@ -1,0 +1,12 @@
+_id: ut_ceefc5722aa5466599e275da0dd910d4
+type: UnitTest
+parentId: uts_801a01ce94344fd58b097bd852809db6
+modified: 1657968329844
+created: 1657968306768
+requestId: req_bdf71bbd271344a0a07d184e47698342
+name: Get by id -> 200 && object
+code: |-
+  const response1 = await insomnia.send();
+  const body = JSON.parse(response1.data)
+  expect(response1.status).to.equal(200);
+  expect(body).to.be.an("object");

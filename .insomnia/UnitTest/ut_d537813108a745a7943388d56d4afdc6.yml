@@ -1,0 +1,12 @@
+_id: ut_d537813108a745a7943388d56d4afdc6
+type: UnitTest
+parentId: uts_801a01ce94344fd58b097bd852809db6
+modified: 1657968320607
+created: 1657967207667
+requestId: req_26d99b4ad8a749c5bb27cb0463b95cb3
+name: Get All -> 200 && Array
+code: |-
+  const response1 = await insomnia.send();
+  const body = JSON.parse(response1.data)
+  expect(response1.status).to.equal(200);
+  expect(body).to.be.an("array");

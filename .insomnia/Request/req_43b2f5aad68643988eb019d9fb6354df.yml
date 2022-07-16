@@ -1,7 +1,7 @@
 _id: req_43b2f5aad68643988eb019d9fb6354df
 type: Request
 parentId: fld_5592e26bd14b49f7a1359830f5dbd8e5
-modified: 1657956681464
+modified: 1657968389827
 created: 1657947954592
 url: "{{ _.URL }}"
 name: "200"
@@ -9,10 +9,10 @@ description: ""
 method: POST
 body:
   mimeType: application/json
-  text: >-
+  text: |-
     {
-    	"email": "{% response 'body', 'req_5e1b78adcf1d409c959fdd8a9bbcc494', 'b64::JC5lbWFpbA==::46b', 'never', 60 %}",
-    	"password": "{% response 'body', 'req_5e1b78adcf1d409c959fdd8a9bbcc494', 'b64::JC5wYXNzd29yZA==::46b', 'never', 60 %}"
+    	"email": "{{ _.userLogin }}",
+    	"password": "{{ _.userPassword }}"
     }
 parameters: []
 headers:
