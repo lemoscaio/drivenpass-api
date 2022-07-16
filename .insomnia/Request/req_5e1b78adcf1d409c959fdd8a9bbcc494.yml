@@ -1,0 +1,30 @@
+_id: req_5e1b78adcf1d409c959fdd8a9bbcc494
+type: Request
+parentId: fld_52dfea01e44e45fda010081ef10f9ece
+modified: 1657949172662
+created: 1657947924685
+url: "{{ _.FURL }}"
+name: register
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"email":"{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'email', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}",
+    	"password":"{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'password', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_612b61bb7b984a1fa07742039b34f641
+authentication: {}
+metaSortKey: -1657946421760
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
