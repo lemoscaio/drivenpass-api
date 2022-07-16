@@ -1,0 +1,24 @@
+_id: req_8c5480675cac4c5792516ae549cbd583
+type: Request
+parentId: fld_50789d483fb14b5e85efa69834db34ff
+modified: 1657959782569
+created: 1657957889939
+url: "{{ _.URL }}"
+name: No 401
+description: ""
+method: POST
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+  prefix: Bearer
+metaSortKey: -1657957889939
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

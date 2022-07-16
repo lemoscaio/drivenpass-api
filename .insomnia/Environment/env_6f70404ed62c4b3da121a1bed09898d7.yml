@@ -1,16 +1,17 @@
 _id: env_6f70404ed62c4b3da121a1bed09898d7
 type: Environment
 parentId: env_becdd629c680f3b655e808b99e4c6b7159d8b630
-modified: 1657949168421
+modified: 1657956932784
 created: 1657948119630
 name: localhost
 data:
-  URL: localhost:4000
-  FURL: localhost:4000{% request 'folder', '', 0 %}
+  URL: localhost:4000{% request 'folder', '', 0 %}
+  token: "{% response 'body', 'req_43b2f5aad68643988eb019d9fb6354df',
+    'b64::JC50b2tlbg==::46b', 'never', 60 %}"
 dataPropertyOrder:
   "&":
     - URL
-    - FURL
+    - token
 color: "#1eff00"
 isPrivate: false
 metaSortKey: 1657948119630

@@ -1,10 +1,10 @@
-_id: req_43b2f5aad68643988eb019d9fb6354df
+_id: req_539ad600637a470584a4ae33de292367
 type: Request
 parentId: fld_5592e26bd14b49f7a1359830f5dbd8e5
-modified: 1657956681464
-created: 1657947954592
+modified: 1657956677917
+created: 1657956670674
 url: "{{ _.URL }}"
-name: "200"
+name: 401 password
 description: ""
 method: POST
 body:
@@ -12,7 +12,7 @@ body:
   text: >-
     {
     	"email": "{% response 'body', 'req_5e1b78adcf1d409c959fdd8a9bbcc494', 'b64::JC5lbWFpbA==::46b', 'never', 60 %}",
-    	"password": "{% response 'body', 'req_5e1b78adcf1d409c959fdd8a9bbcc494', 'b64::JC5wYXNzd29yZA==::46b', 'never', 60 %}"
+    	"password": "wrongPassword"
     }
 parameters: []
 headers:
@@ -20,7 +20,7 @@ headers:
     value: application/json
     id: pair_affd7d238edd40adab9524ec725383f8
 authentication: {}
-metaSortKey: -1657945150324
+metaSortKey: -1657863959021.75
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

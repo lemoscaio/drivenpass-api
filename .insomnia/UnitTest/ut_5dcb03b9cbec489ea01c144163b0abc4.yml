@@ -1,0 +1,10 @@
+_id: ut_5dcb03b9cbec489ea01c144163b0abc4
+type: UnitTest
+parentId: uts_503a680bc8594f93aab9fc5c0be706a9
+modified: 1657956838638
+created: 1657956831095
+requestId: req_a9f4c6dc49b6454e97743c2462f4feef
+name: Login -> 401 email
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(401);
