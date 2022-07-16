@@ -11,10 +11,10 @@ datasource db {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique @db.VarChar(254)
-  password  String   @db.VarChar(50)
-  createdAt DateTime @default(now()) @db.Timestamptz()
+  id        Int       @id @default(autoincrement())
+  email     String    @unique @db.VarChar(254)
+  password  String    @db.VarChar(254)
+  createdAt DateTime? @default(now()) @db.Timestamptz()
 
   sessions    Session[]
   credentials Credential[]
@@ -27,10 +27,10 @@ model User {
 }
 
 model Session {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   userId    Int
-  token     String   @unique
-  createdAt DateTime @default(now()) @db.Timestamptz()
+  token     String    @unique
+  createdAt DateTime? @default(now()) @db.Timestamptz()
 
   user User @relation(fields: [userId], references: [id])
 
@@ -38,13 +38,13 @@ model Session {
 }
 
 model Credential {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   userId    Int
-  label     String   @db.VarChar(254)
+  label     String    @db.VarChar(254)
   url       String
   login     String
   password  String
-  createdAt DateTime @default(now()) @db.Timestamptz()
+  createdAt DateTime? @default(now()) @db.Timestamptz()
 
   user User @relation(fields: [userId], references: [id])
 
@@ -53,11 +53,11 @@ model Credential {
 }
 
 model Note {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   userId    Int
-  title     String   @db.VarChar(50)
-  body      String   @db.VarChar(1000)
-  createdAt DateTime @default(now()) @db.Timestamptz()
+  title     String    @db.VarChar(50)
+  body      String    @db.VarChar(1000)
+  createdAt DateTime? @default(now()) @db.Timestamptz()
 
   user User @relation(fields: [userId], references: [id])
 
@@ -66,15 +66,16 @@ model Note {
 }
 
 model Card {
-  id             Int      @id @default(autoincrement())
+  id             Int       @id @default(autoincrement())
   userId         Int
-  label          String   @db.VarChar(254)
-  number         String   @db.VarChar(254)
-  cardholder     String   @db.VarChar(254)
-  securityCode   String   @db.VarChar(3)
-  expirationDate String   @db.VarChar(10)
-  isVirtual      Boolean  @default(false)
-  createdAt      DateTime @default(now()) @db.Timestamptz()
+  label          String    @db.VarChar(254)
+  number         String    @db.VarChar(254)
+  cardholder     String    @db.VarChar(254)
+  securityCode   String    @db.VarChar(254)
+  expirationDate String    @db.VarChar(10)
+  isVirtual      Boolean   @default(false)
+  type           CardType
+  createdAt      DateTime? @default(now()) @db.Timestamptz()
 
   user User @relation(fields: [userId], references: [id])
 
@@ -83,12 +84,12 @@ model Card {
 }
 
 model Network {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   userId    Int
-  label     String   @db.VarChar(254)
-  ssid      String   @db.VarChar(32)
-  password  String   @db.VarChar(254)
-  createdAt DateTime @default(now()) @db.Timestamptz()
+  label     String    @db.VarChar(254)
+  ssid      String    @db.VarChar(32)
+  password  String    @db.VarChar(254)
+  createdAt DateTime? @default(now()) @db.Timestamptz()
 
   user User @relation(fields: [userId], references: [id])
 
@@ -104,7 +105,7 @@ model Document {
   number         String       @db.VarChar(254)
   expirationDate String       @db.VarChar(10)
   issuedBy       String       @db.VarChar(254)
-  createdAt      DateTime     @default(now()) @db.Timestamptz()
+  createdAt      DateTime?    @default(now()) @db.Timestamptz()
 
   user User @relation(fields: [userId], references: [id])
   @@map("documents")
@@ -113,4 +114,10 @@ model Document {
 enum DocumentType {
   licenseDriver
   idCard
+}
+
+enum CardType {
+  credit
+  debit
+  creditAndDebit
 }
