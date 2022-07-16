@@ -1,5 +1,6 @@
 import { Router } from "express"
+import { authRouter } from "./authRouter"
 
-const router = Router()
+export const router = Router()
 
-export { router }
+router.use(authRouter)
