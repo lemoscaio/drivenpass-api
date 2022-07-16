@@ -1,0 +1,10 @@
+_id: ut_47c5071c7e714647b86ff5e8886ce6a0
+type: UnitTest
+parentId: uts_b5ce5d7e4b524ebe841db87625545a7d
+modified: 1657958475672
+created: 1657958465650
+requestId: req_affa55626dea41c1b6af10521b166a6b
+name: 401 wrong bearer
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(401);
