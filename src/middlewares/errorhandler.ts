@@ -19,5 +19,5 @@ export function handleError(
   if (error.details)
     return res.status(422).send(error.details.map(({ message }) => message))
 
-  res.status(500)
+  res.sendStatus(500)
 }
