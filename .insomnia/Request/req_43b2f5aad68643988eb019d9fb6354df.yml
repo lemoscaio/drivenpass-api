@@ -1,0 +1,30 @@
+_id: req_43b2f5aad68643988eb019d9fb6354df
+type: Request
+parentId: fld_5592e26bd14b49f7a1359830f5dbd8e5
+modified: 1657948867995
+created: 1657947954592
+url: "{{ _.FURL }}"
+name: login
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email":"s",
+    	"password":"2"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_affd7d238edd40adab9524ec725383f8
+authentication: {}
+metaSortKey: -1657945150324
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
