@@ -1,8 +1,8 @@
-_id: req_c1639605e0384a50945ac8f3a084be2c
+_id: req_5a4b9138b0004c62a93b26e82680f563
 type: Request
-parentId: fld_041e1d40220e4546b99f6590bade1f0b
-modified: 1658038218109
-created: 1657961136962
+parentId: fld_3c069f3c256a42db801345be98f374df
+modified: 1658043016130
+created: 1658039223319
 url: "{{ _.URL }}"
 name: 422 schema
 description: ""
@@ -11,10 +11,8 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"url": "url",
-    	"label": "bigbigbigbigbigbigbigbigbigbigbigbigbigbigbigbigLabel",
-    	"login": "",
-    	"password": ""
+    	"title": "titletitletitletitletitletitletitletitletitletitletitle",
+    	"body": ""
     }
 parameters: []
 headers:

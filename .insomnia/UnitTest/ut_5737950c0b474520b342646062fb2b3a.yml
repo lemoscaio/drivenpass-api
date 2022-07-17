@@ -1,0 +1,10 @@
+_id: ut_5737950c0b474520b342646062fb2b3a
+type: UnitTest
+parentId: uts_a57e6d66e7ff4d399e15189b653d0b11
+modified: 1658043477055
+created: 1658043448707
+requestId: req_ad0823247f534cbaa648030ee0cce4ff
+name: Get by id -> 404
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(404);

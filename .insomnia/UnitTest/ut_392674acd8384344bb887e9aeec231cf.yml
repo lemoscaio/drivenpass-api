@@ -1,9 +1,9 @@
-_id: ut_d537813108a745a7943388d56d4afdc6
+_id: ut_392674acd8384344bb887e9aeec231cf
 type: UnitTest
-parentId: uts_801a01ce94344fd58b097bd852809db6
-modified: 1658043402877
-created: 1657967207667
-requestId: req_26d99b4ad8a749c5bb27cb0463b95cb3
+parentId: uts_a57e6d66e7ff4d399e15189b653d0b11
+modified: 1658043414414
+created: 1658043397780
+requestId: req_612634945fe349ea8f576e1d099d5576
 name: Get All -> 200 && Array
 code: |-
   const response1 = await insomnia.send();

@@ -1,9 +1,9 @@
-_id: req_71b5f035ced64451ab64bbf65c7b99f0
+_id: req_a6d4c7f46aaf4e46be93de4ab7eb9996
 type: Request
-parentId: fld_041e1d40220e4546b99f6590bade1f0b
-modified: 1658038265693
-created: 1657968511588
-url: "{{ _.URL }}/31"
+parentId: fld_3c069f3c256a42db801345be98f374df
+modified: 1658043059632
+created: 1658039223343
+url: "{{ _.URL }}/1"
 name: 401 get by id
 description: ""
 method: GET
