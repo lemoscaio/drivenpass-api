@@ -7,6 +7,7 @@ import { returnCredentialWithCleanPassword } from "@utils/formatData"
 export type CreateCredentialData = Omit<Credential, "id" | "createdAt">
 
 export async function createCredential(data: CreateCredentialData) {
+  const cleanData = { password: data.password }
   const hashPassword = encrypt.cryptr.encryptPassword(data.password)
   data.password = hashPassword
 
@@ -23,7 +24,7 @@ export async function createCredential(data: CreateCredentialData) {
 
   const createdCredential = await credentialsRepository.createCredential(data)
 
-  createdCredential.password = data.password
+  createdCredential.password = cleanData.password
 
   return createdCredential
 }
