@@ -7,7 +7,7 @@ export async function createCredential(req: Request, res: Response) {
   const { url, label, login, password }: CreateCredentialData = req.body
   const { id: userId }: { id: number } = res.locals.user
 
-  await credentialsService.createCredential({
+  const createdCredential = await credentialsService.createCredential({
     url,
     label,
     login,
@@ -15,7 +15,9 @@ export async function createCredential(req: Request, res: Response) {
     userId,
   })
 
-  res.status(201).send(req.body)
+  createdCredential.password = password
+
+  res.status(201).send(createdCredential)
 }
 
 export async function findAllCredentials(req: Request, res: Response) {

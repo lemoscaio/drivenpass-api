@@ -24,12 +24,9 @@ export async function createCredential(data: CreateCredentialData) {
       message: "A credential with this label already exists",
     }
 
-  const createCredentialResult = await credentialsRepository.createCredential(
-    data,
-  )
-  console.log("🚀 ~ createCredentialResult", createCredentialResult)
+  const createdCredential = await credentialsRepository.createCredential(data)
 
-  return createCredentialResult
+  return createdCredential
 }
 
 export async function findAllCredentials(userId: number) {
