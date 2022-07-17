@@ -1,12 +1,12 @@
-_id: req_71b5f035ced64451ab64bbf65c7b99f0
+_id: req_4c4447932ee44430975a8c834909d9df
 type: Request
 parentId: fld_041e1d40220e4546b99f6590bade1f0b
-modified: 1658038265693
-created: 1657968511588
-url: "{{ _.URL }}/31"
-name: 401 get by id
+modified: 1658038258331
+created: 1658037852510
+url: "{{ _.URL }}/25"
+name: 401 delete by id
 description: ""
-method: GET
+method: DELETE
 body: {}
 parameters: []
 headers: []
@@ -14,7 +14,7 @@ authentication:
   type: bearer
   token: "{{ _.token }}"
   prefix: Bearer
-metaSortKey: -1657960790541.125
+metaSortKey: -1657947738051.375
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
