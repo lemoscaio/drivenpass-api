@@ -9,7 +9,6 @@ export async function createDocument(data: CreateDocumentData) {
     data.userId,
     data.number,
   )
-  console.log("🚀 ~ foundDocument", foundDocument)
 
   if (foundDocument)
     throw {

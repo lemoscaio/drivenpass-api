@@ -18,7 +18,6 @@ export async function createNote(req: Request, res: Response) {
 
 export async function findAllNotes(req: Request, res: Response) {
   const { id: userId }: { id: number } = res.locals.user
-  console.log("aqui")
 
   const notes = await notesService.findAllNotes(userId)
 

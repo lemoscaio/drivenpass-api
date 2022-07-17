@@ -27,7 +27,6 @@ export async function createDocument(req: Request, res: Response) {
 
 export async function findAllDocuments(req: Request, res: Response) {
   const { id: userId }: { id: number } = res.locals.user
-  console.log("aqui")
 
   const documents = await documentsService.findAllDocuments(userId)
 

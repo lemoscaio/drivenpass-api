@@ -9,7 +9,6 @@ export async function createNote(data: CreateNoteData) {
     data.userId,
     data.title,
   )
-  console.log("🚀 ~ foundNote", foundNote)
 
   if (foundNote)
     throw {

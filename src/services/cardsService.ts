@@ -20,7 +20,6 @@ export async function createCard(data: CreateCardData) {
     data.userId,
     data.label,
   )
-  console.log("🚀 ~ foundCard", foundCard)
 
   if (foundCard)
     throw {

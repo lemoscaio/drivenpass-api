@@ -8,15 +8,12 @@ export type CreateCredentialData = Omit<Credential, "id" | "createdAt">
 
 export async function createCredential(data: CreateCredentialData) {
   const hashPassword = encrypt.cryptr.encryptPassword(data.password)
-  console.log(data)
   data.password = hashPassword
-  console.log(data)
 
   const foundCredential = await credentialsRepository.findByLabelAndUserId(
     data.userId,
     data.label,
   )
-  console.log("🚀 ~ foundCredential", foundCredential)
 
   if (foundCredential)
     throw {

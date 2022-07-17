@@ -8,15 +8,12 @@ export type CreateNetworkData = Omit<Network, "id" | "createdAt">
 
 export async function createNetwork(data: CreateNetworkData) {
   const hashPassword = encrypt.cryptr.encryptPassword(data.password)
-  console.log(data)
   data.password = hashPassword
-  console.log(data)
 
   const foundNetwork = await networksRepository.findByLabelAndUserId(
     data.userId,
     data.label,
   )
-  console.log("🚀 ~ foundNetwork", foundNetwork)
 
   if (foundNetwork)
     throw {
