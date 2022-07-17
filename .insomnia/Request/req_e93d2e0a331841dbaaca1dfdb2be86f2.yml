@@ -1,0 +1,24 @@
+_id: req_e93d2e0a331841dbaaca1dfdb2be86f2
+type: Request
+parentId: fld_aa4cf2c17be44a0d9523447734e18811
+modified: 1658052844073
+created: 1658051286503
+url: "{{ _.URL }}/100000000"
+name: 404 delete by id
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+  prefix: Bearer
+metaSortKey: -1657949054342.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

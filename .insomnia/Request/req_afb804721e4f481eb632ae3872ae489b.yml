@@ -1,0 +1,37 @@
+_id: req_afb804721e4f481eb632ae3872ae489b
+type: Request
+parentId: fld_aa4cf2c17be44a0d9523447734e18811
+modified: 1658052785425
+created: 1658051286474
+url: "{{ _.URL }}"
+name: 422 schema
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"type": "driverLic2ense",
+    	"fullName": "",
+    	"number": "",
+    	"expirationDate": "",
+    	"issuedBy": ""
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c59ea62424ea47dd87027b0f3fb13f18
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+  prefix: Bearer
+  disabled: false
+metaSortKey: -1657965624890.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

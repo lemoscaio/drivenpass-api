@@ -1,0 +1,25 @@
+_id: req_36e9271b30be47328f20d78d5285021d
+type: Request
+parentId: fld_aa4cf2c17be44a0d9523447734e18811
+modified: 1658052839488
+created: 1658051286499
+url: "{{ _.URL }}/{% response 'body', 'req_09d83e5109cc4141ade9fd70b2bbd6e8',
+  'b64::JC5pZA==::46b', 'never', 60 %}"
+name: 204 delete by id
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+  prefix: Bearer
+metaSortKey: -1657951686925.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

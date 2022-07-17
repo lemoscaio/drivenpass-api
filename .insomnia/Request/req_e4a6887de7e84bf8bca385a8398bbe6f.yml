@@ -1,0 +1,37 @@
+_id: req_e4a6887de7e84bf8bca385a8398bbe6f
+type: Request
+parentId: fld_aa4cf2c17be44a0d9523447734e18811
+modified: 1658052756325
+created: 1658051286480
+url: "{{ _.URL }}"
+name: 409 number
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"type": "driverLicense",
+    	"fullName": "{% faker 'name', '', '', '', '', '', '', '', '', 'accountName', '', '', '', '', '', '', '', '', 'firstName', '', '', '', '', '', '', '', 'pt_BR' %} {% faker 'name', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'middleName', '', '', '', '', '', '', '', 'pt_BR' %} {% faker 'name', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'lastName', '', '', '', '', '', '', '', 'pt_BR' %}",
+    	"number": "{% response 'body', 'req_09d83e5109cc4141ade9fd70b2bbd6e8', 'b64::JC5udW1iZXI=::46b', 'never', 60 %}",
+    	"expirationDate": "21/07/2029",
+    	"issuedBy": "{% faker 'company', '', '', '', '', 'companyName', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'en' %}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c59ea62424ea47dd87027b0f3fb13f18
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+  prefix: Bearer
+  disabled: false
+metaSortKey: -1657965624903
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
