@@ -3,7 +3,7 @@ import {
   deleteNoteById,
   findAllNotes,
   findNoteById,
-} from "@controllers/notesControllers"
+} from "@controllers/notesController"
 import { validateSchema } from "@middlewares/validateSchema"
 import { validateSession } from "@middlewares/validateSession"
 import { validateToken } from "@middlewares/validateToken"

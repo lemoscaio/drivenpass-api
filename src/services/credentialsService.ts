@@ -2,7 +2,7 @@ import { Credential } from "@prisma/client"
 
 import * as credentialsRepository from "@repositories/credentialsRepository"
 import { encrypt } from "@utils/encryptFunctions"
-import { returnCleanPassword } from "@utils/formatData"
+import { returnCredentialWithCleanPassword } from "@utils/formatData"
 
 export type CreateCredentialData = Omit<Credential, "id" | "createdAt">
 
@@ -26,13 +26,17 @@ export async function createCredential(data: CreateCredentialData) {
 
   const createdCredential = await credentialsRepository.createCredential(data)
 
+  createdCredential.password = data.password
+
   return createdCredential
 }
 
 export async function findAllCredentials(userId: number) {
   const credentials = await credentialsRepository.findAllByUserId(userId)
 
-  const passwordCleanCredentials = credentials.map(returnCleanPassword)
+  const passwordCleanCredentials = credentials.map(
+    returnCredentialWithCleanPassword,
+  )
 
   return passwordCleanCredentials
 }
@@ -47,7 +51,7 @@ export async function findCredentialById(userId: number, credentialId: number) {
       message: "This credential does not belong to this user",
     }
 
-  const passwordCleanCredential = returnCleanPassword(credential)
+  const passwordCleanCredential = returnCredentialWithCleanPassword(credential)
 
   return passwordCleanCredential
 }

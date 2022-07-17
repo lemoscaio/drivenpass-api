@@ -5,7 +5,7 @@ import {
   deleteCredentialById,
   findAllCredentials,
   findCredentialById,
-} from "@controllers/credentialsControllers"
+} from "@controllers/credentialsController"
 import { validateSchema } from "@middlewares/validateSchema"
 import { newCredentialSchema } from "@schemas/newCredentialSchema"
 import { validateToken } from "@middlewares/validateToken"
