@@ -1,0 +1,35 @@
+_id: req_c153d2536ea24a12ab1c55e2a1b913f4
+type: Request
+parentId: fld_6f48ef3766984faeb5d92a9d4201b2c6
+modified: 1658050560731
+created: 1658050117164
+url: "{{ _.URL }}"
+name: 422 schema
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"label": "",
+    	"ssid": "ssidssidssidssidssidssidssidssidssidssidssidssidssidssid",
+    	"password": ""
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c59ea62424ea47dd87027b0f3fb13f18
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+  prefix: Bearer
+  disabled: false
+metaSortKey: -1657965624890.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

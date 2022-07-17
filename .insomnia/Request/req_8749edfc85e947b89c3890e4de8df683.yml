@@ -1,0 +1,35 @@
+_id: req_8749edfc85e947b89c3890e4de8df683
+type: Request
+parentId: fld_6f48ef3766984faeb5d92a9d4201b2c6
+modified: 1658050504311
+created: 1658050117169
+url: "{{ _.URL }}"
+name: 409 label
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"label": "{% response 'body', 'req_525ba4074d9448139ca2d5a2fa10103a', 'b64::JC5sYWJlbA==::46b', 'never', 60 %}",
+    	"ssid": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', '', 'userName', '', '', '', 'suffix', '', 'words', '', '', '', 'verb', '', 'en' %}",
+    	"password": "{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'password', '', '', '', '', '', '', '', '', '', '', '', 'en' %}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c59ea62424ea47dd87027b0f3fb13f18
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+  prefix: Bearer
+  disabled: false
+metaSortKey: -1657965624903
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

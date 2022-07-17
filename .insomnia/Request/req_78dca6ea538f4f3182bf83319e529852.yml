@@ -1,10 +1,10 @@
-_id: req_f1c860aedd6e434da96292b05ed557e3
+_id: req_78dca6ea538f4f3182bf83319e529852
 type: Request
-parentId: fld_6f65e8483ac84a1e96448037266c732c
-modified: 1658049422541
-created: 1658044076720
-url: "{{ _.URL }}"
-name: 200 get all
+parentId: fld_6f48ef3766984faeb5d92a9d4201b2c6
+modified: 1658050578657
+created: 1658050117187
+url: "{{ _.URL }}/1"
+name: 401 get by id
 description: ""
 method: GET
 body: {}
@@ -14,7 +14,7 @@ authentication:
   type: bearer
   token: "{{ _.token }}"
   prefix: Bearer
-metaSortKey: -1657965624878
+metaSortKey: -1657960790541.125
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
