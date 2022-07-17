@@ -1,0 +1,35 @@
+_id: req_525ba4074d9448139ca2d5a2fa10103a
+type: Request
+parentId: fld_6f48ef3766984faeb5d92a9d4201b2c6
+modified: 1658050840515
+created: 1658050117156
+url: "{{ _.URL }}"
+name: "201"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"label": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', '', 'userName', '', '', '', 'suffix', '', 'words', '', '', '', 'verb', '', 'en' %}",
+    	"ssid": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', '', 'userName', '', '', '', 'suffix', '', 'words', '', '', '', 'verb', '', 'en' %}",
+    	"password": "{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'password', '', '', '', '', '', '', '', '', '', '', '', 'en' %}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c59ea62424ea47dd87027b0f3fb13f18
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+  prefix: Bearer
+  disabled: false
+metaSortKey: -1657965624928
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
