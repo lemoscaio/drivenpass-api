@@ -1,15 +1,26 @@
 _id: req_3a56a014d678473682fb38f8e8141f86
 type: Request
 parentId: fld_50789d483fb14b5e85efa69834db34ff
-modified: 1657958839603
+modified: 1658047132738
 created: 1657957951586
 url: "{{ _.URL }}"
 name: 401 wrong token
 description: ""
 method: POST
-body: {}
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"url": "{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'url', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}",
+    	"label": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'word', '', '', '', '', 'word', '', '', '', 'noun', '', 'pt_BR' %}",
+    	"login": "{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'userName', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}",
+    	"password": "{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'password', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}"
+    }
 parameters: []
-headers: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_f4ac46ee85a24be9bc03b91e27fc24c3
 authentication:
   type: bearer
   token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFsaW5lX0Nvc3R12345dG1haWwuY29tIiwiaWF0IjoxNjU3OTU2NDE5fQ.JP_UNane5th9Lcbk5EHxdpjSPveaExifTEbXqJYc8eQ

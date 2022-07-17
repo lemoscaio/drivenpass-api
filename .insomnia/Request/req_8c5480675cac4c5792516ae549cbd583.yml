@@ -1,15 +1,26 @@
 _id: req_8c5480675cac4c5792516ae549cbd583
 type: Request
 parentId: fld_50789d483fb14b5e85efa69834db34ff
-modified: 1657966704526
+modified: 1658047114013
 created: 1657957889939
 url: "{{ _.URL }}"
 name: No 401
 description: ""
 method: POST
-body: {}
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"url": "{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'url', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}",
+    	"label": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'word', '', '', '', '', 'word', '', '', '', 'noun', '', 'pt_BR' %}",
+    	"login": "{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'userName', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}",
+    	"password": "{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'password', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}"
+    }
 parameters: []
-headers: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_45305a6a862d4773967ac6df588d37e5
 authentication:
   type: bearer
   token: "{{ _.token }}"
