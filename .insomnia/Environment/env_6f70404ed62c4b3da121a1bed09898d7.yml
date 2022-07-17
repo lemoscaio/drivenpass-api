@@ -1,17 +1,26 @@
 _id: env_6f70404ed62c4b3da121a1bed09898d7
 type: Environment
 parentId: env_becdd629c680f3b655e808b99e4c6b7159d8b630
-modified: 1657956932784
+modified: 1657967072209
 created: 1657948119630
 name: localhost
 data:
   URL: localhost:4000{% request 'folder', '', 0 %}
   token: "{% response 'body', 'req_43b2f5aad68643988eb019d9fb6354df',
-    'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+    'b64::JC50b2tlbg==::46b', 'no-history', 60 %}"
+  completeLogin: "{% response 'raw', 'req_5e1b78adcf1d409c959fdd8a9bbcc494', '',
+    'no-history', 60 %}"
+  userLogin: "{% response 'body', 'req_5e1b78adcf1d409c959fdd8a9bbcc494',
+    'b64::JC5lbWFpbA==::46b', 'no-history', 60 %}"
+  userPassword: "{% response 'body', 'req_5e1b78adcf1d409c959fdd8a9bbcc494',
+    'b64::JC5wYXNzd29yZA==::46b', 'no-history', 60 %}"
 dataPropertyOrder:
   "&":
     - URL
     - token
+    - completeLogin
+    - userLogin
+    - userPassword
 color: "#1eff00"
 isPrivate: false
 metaSortKey: 1657948119630

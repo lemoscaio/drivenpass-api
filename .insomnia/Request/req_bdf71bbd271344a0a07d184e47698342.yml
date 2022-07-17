@@ -1,12 +1,13 @@
-_id: req_8c5480675cac4c5792516ae549cbd583
+_id: req_bdf71bbd271344a0a07d184e47698342
 type: Request
-parentId: fld_50789d483fb14b5e85efa69834db34ff
-modified: 1657966704526
-created: 1657957889939
-url: "{{ _.URL }}"
-name: No 401
+parentId: fld_041e1d40220e4546b99f6590bade1f0b
+modified: 1657969247244
+created: 1657968068606
+url: "{{ _.URL }}/{% response 'body', 'req_26d99b4ad8a749c5bb27cb0463b95cb3',
+  'b64::JC5bMF0uaWQ=::46b', 'never', 60 %}"
+name: 200 get by id
 description: ""
-method: POST
+method: GET
 body: {}
 parameters: []
 headers: []
@@ -14,7 +15,7 @@ authentication:
   type: bearer
   token: "{{ _.token }}"
   prefix: Bearer
-metaSortKey: -1657957889939
+metaSortKey: -1657961757408.5
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

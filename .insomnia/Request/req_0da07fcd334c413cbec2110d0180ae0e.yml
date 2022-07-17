@@ -1,10 +1,10 @@
-_id: req_57d08c146e3c43eebf16bb4a12a8bb11
+_id: req_0da07fcd334c413cbec2110d0180ae0e
 type: Request
 parentId: fld_041e1d40220e4546b99f6590bade1f0b
-modified: 1657968568236
-created: 1657956952191
+modified: 1657966708538
+created: 1657964339622
 url: "{{ _.URL }}"
-name: "201"
+name: 409 label
 description: ""
 method: POST
 body:
@@ -12,7 +12,7 @@ body:
   text: >-
     {
     	"url": "{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'url', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}",
-    	"label": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'word', '', '', '', '', 'word', '', '', '', 'noun', '', 'pt_BR' %}",
+    	"label": "{% response 'body', 'req_57d08c146e3c43eebf16bb4a12a8bb11', 'b64::JC5sYWJlbA==::46b', 'never', 60 %}",
     	"login": "{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'userName', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}",
     	"password": "{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'password', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}"
     }
@@ -26,7 +26,7 @@ authentication:
   token: "{{ _.token }}"
   prefix: Bearer
   disabled: false
-metaSortKey: -1657956952191
+metaSortKey: -1657954319583.25
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
