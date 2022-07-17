@@ -15,8 +15,6 @@ export async function createCredential(req: Request, res: Response) {
     userId,
   })
 
-  createdCredential.password = password
-
   res.status(201).send(createdCredential)
 }
 

@@ -72,6 +72,7 @@ model Card {
   number         String    @db.VarChar(254)
   cardholder     String    @db.VarChar(254)
   securityCode   String    @db.VarChar(254)
+  password       String    @db.VarChar(254)
   expirationDate String    @db.VarChar(10)
   isVirtual      Boolean   @default(false)
   type           CardType
