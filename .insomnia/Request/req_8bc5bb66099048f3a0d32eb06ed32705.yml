@@ -1,0 +1,25 @@
+_id: req_8bc5bb66099048f3a0d32eb06ed32705
+type: Request
+parentId: fld_aa4cf2c17be44a0d9523447734e18811
+modified: 1658052801603
+created: 1658051286487
+url: "{{ _.URL }}/{% response 'body', 'req_09d83e5109cc4141ade9fd70b2bbd6e8',
+  'b64::JC5pZA==::46b', 'never', 60 %}"
+name: 200 get by id
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+  prefix: Bearer
+metaSortKey: -1657961757408.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
