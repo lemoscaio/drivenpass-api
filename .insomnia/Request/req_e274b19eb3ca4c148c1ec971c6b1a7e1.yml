@@ -1,9 +1,9 @@
-_id: req_4c4447932ee44430975a8c834909d9df
+_id: req_e274b19eb3ca4c148c1ec971c6b1a7e1
 type: Request
-parentId: fld_041e1d40220e4546b99f6590bade1f0b
-modified: 1658047221651
-created: 1658037852510
-url: "{{ _.URL }}/2"
+parentId: fld_6f65e8483ac84a1e96448037266c732c
+modified: 1658048482158
+created: 1658044076745
+url: "{{ _.URL }}/7"
 name: 401 delete by id
 description: ""
 method: DELETE
@@ -14,7 +14,7 @@ authentication:
   type: bearer
   token: "{{ _.token }}"
   prefix: Bearer
-metaSortKey: -1657947738051.375
+metaSortKey: -1657950370634.125
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

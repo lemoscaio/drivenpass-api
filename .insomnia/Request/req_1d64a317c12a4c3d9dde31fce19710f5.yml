@@ -1,0 +1,40 @@
+_id: req_1d64a317c12a4c3d9dde31fce19710f5
+type: Request
+parentId: fld_6f65e8483ac84a1e96448037266c732c
+modified: 1658048566626
+created: 1658044076703
+url: "{{ _.URL }}"
+name: "201"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"cardholder": "{% faker 'name', '', '', '', '', '', '', '', '', 'accountName', '', '', '', '', '', '', '', '', 'firstName', '', '', '', '', '', '', '', 'pt_BR' %} {% faker 'name', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'middleName', '', '', '', '', '', '', '', 'pt_BR' %} {% faker 'name', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'lastName', '', '', '', '', '', '', '', 'pt_BR' %}",
+    	"expirationDate": "07/27",
+    	"isVirtual": {% faker 'datatype', '', '', '', '', '', 'type', 'boolean', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'en' %},
+    	"label": "{% faker 'finance', '', '', '', '', '', '', '', '', 'accountName', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}",
+    	"number": "{% faker 'finance', '', '', '', '', '', '', '', '', 'creditCardNumber', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'en' %}",
+    	"securityCode": "{% faker 'finance', '', '', '', '', '', '', '', '', 'creditCardCVV', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %}",
+    	"password": "1234",
+    	"type": "credit"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c59ea62424ea47dd87027b0f3fb13f18
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+  prefix: Bearer
+  disabled: false
+metaSortKey: -1657965624928
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,18 +1,24 @@
-_id: req_b3ad8a3a52054bc3a54eb4de06d02c5a
+_id: req_46f832ab76034f61aae203aaef09a57c
 type: Request
-parentId: fld_3c069f3c256a42db801345be98f374df
-modified: 1658047295946
-created: 1658039223309
+parentId: fld_6f65e8483ac84a1e96448037266c732c
+modified: 1658047779705
+created: 1658044076712
 url: "{{ _.URL }}"
-name: "201"
+name: 422 schema
 description: ""
 method: POST
 body:
   mimeType: application/json
-  text: >-
+  text: |-
     {
-    	"title": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'word', '', '', '', '', 'word', '', '', '', 'noun', '', 'pt_BR' %}",
-    	"body": "{% faker 'lorem', '', '', '', '', '', '', '', '', '', '', '', '', '', 'url', 'sentences', '', '', '', '', '', '', '', '', '', '', 'en_US' %}"
+    	"cardholder": "",
+    	"expirationDate": "027/27",
+    	"isVirtual": "",
+    	"label": "",
+    	"number": "",
+    	"securityCode": "",
+    	"password": "",
+    	"type": "crebit"
     }
 parameters: []
 headers:
@@ -24,7 +30,7 @@ authentication:
   token: "{{ _.token }}"
   prefix: Bearer
   disabled: false
-metaSortKey: -1657965624928
+metaSortKey: -1657965624890.5
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

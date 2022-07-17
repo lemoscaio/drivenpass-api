@@ -1,0 +1,10 @@
+_id: fld_6f65e8483ac84a1e96448037266c732c
+type: RequestGroup
+parentId: wrk_53d74f26e3734fb2aa42972ce75f679d
+modified: 1658044079703
+created: 1658044076698
+name: /cards
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: 350
