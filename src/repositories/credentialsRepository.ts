@@ -6,11 +6,16 @@ export function createCredential(data: CreateCredentialData) {
 }
 
 export function findByLabelAndUserId(userId: number, label: string) {
-  return prisma.credential.findFirst({ where: { userId, label } })
+  return prisma.credential.findFirst({
+    where: { userId, label: { equals: label, mode: "insensitive" } },
+  })
 }
 
 export function findAllByUserId(userId: number) {
-  return prisma.credential.findMany({ where: { userId } })
+  return prisma.credential.findMany({
+    where: { userId },
+    orderBy: { id: "desc" },
+  })
 }
 
 export function findById(credentialId: number) {

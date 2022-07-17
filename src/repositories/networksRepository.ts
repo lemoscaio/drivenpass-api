@@ -6,11 +6,13 @@ export function createNetwork(data: CreateNetworkData) {
 }
 
 export function findByLabelAndUserId(userId: number, label: string) {
-  return prisma.network.findFirst({ where: { userId, label } })
+  return prisma.network.findFirst({
+    where: { userId, label: { equals: label, mode: "insensitive" } },
+  })
 }
 
 export function findAllByUserId(userId: number) {
-  return prisma.network.findMany({ where: { userId } })
+  return prisma.network.findMany({ where: { userId }, orderBy: { id: "desc" } })
 }
 
 export function findById(networkId: number) {

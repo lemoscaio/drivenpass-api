@@ -10,7 +10,10 @@ export function createDocument(data: CreateDocumentData) {
 }
 
 export function findAllByUserId(userId: number) {
-  return prisma.document.findMany({ where: { userId } })
+  return prisma.document.findMany({
+    where: { userId },
+    orderBy: { id: "desc" },
+  })
 }
 
 export function findById(documentId: number) {

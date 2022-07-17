@@ -6,11 +6,13 @@ export function createCard(data: CreateCardData) {
 }
 
 export function findByLabelAndUserId(userId: number, label: string) {
-  return prisma.card.findFirst({ where: { userId, label } })
+  return prisma.card.findFirst({
+    where: { userId, label: { equals: label, mode: "insensitive" } },
+  })
 }
 
 export function findAllByUserId(userId: number) {
-  return prisma.card.findMany({ where: { userId } })
+  return prisma.card.findMany({ where: { userId }, orderBy: { id: "desc" } })
 }
 
 export function findById(cardId: number) {
