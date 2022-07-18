@@ -1,18 +1,20 @@
-_id: req_5a4b9138b0004c62a93b26e82680f563
+_id: req_e730a4619f42431f9878f116b70f3a62
 type: Request
-parentId: fld_3c069f3c256a42db801345be98f374df
-modified: 1658113071963
-created: 1658039223319
+parentId: fld_04b564fe2a324207949f88e16f5120d4
+modified: 1658094050857
+created: 1658053424571
 url: "{{ _.URL }}"
-name: 422 schema
+name: case test
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"title": "titletitletitletitletitletitletitletitletitletitletitle",
-    	"body": ""
+    	"label": "wireleSS",
+    	"url": "http://fatal-hedgehog.info",
+    	"login": "Liz85",
+    	"password": "38g8j9IRmEB5qiK"
     }
 parameters: []
 headers:
@@ -24,7 +26,7 @@ authentication:
   token: "{{ _.token }}"
   prefix: Bearer
   disabled: false
-metaSortKey: -1657965624890.5
+metaSortKey: -1657965624915.5
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

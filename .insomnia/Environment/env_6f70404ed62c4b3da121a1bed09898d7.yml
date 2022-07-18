@@ -1,7 +1,7 @@
 _id: env_6f70404ed62c4b3da121a1bed09898d7
 type: Environment
 parentId: env_becdd629c680f3b655e808b99e4c6b7159d8b630
-modified: 1658014752798
+modified: 1658115861646
 created: 1657948119630
 name: localhost
 data:
@@ -11,9 +11,9 @@ data:
   completeLogin: "{% response 'raw', 'req_5e1b78adcf1d409c959fdd8a9bbcc494', '',
     'no-history', 60 %}"
   userLogin: "{% response 'body', 'req_5e1b78adcf1d409c959fdd8a9bbcc494',
-    'b64::JC5lbWFpbA==::46b', 'no-history', 60 %}"
+    'b64::JC5lbWFpbA==::46b', 'never', 60 %}"
   userPassword: "{% response 'body', 'req_5e1b78adcf1d409c959fdd8a9bbcc494',
-    'b64::JC5wYXNzd29yZA==::46b', 'no-history', 60 %}"
+    'b64::JC5wYXNzd29yZA==::46b', 'never', 60 %}"
 dataPropertyOrder:
   "&":
     - URL

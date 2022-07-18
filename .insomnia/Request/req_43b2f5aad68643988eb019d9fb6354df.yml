@@ -1,19 +1,16 @@
 _id: req_43b2f5aad68643988eb019d9fb6354df
 type: Request
 parentId: fld_5592e26bd14b49f7a1359830f5dbd8e5
-modified: 1658052808967
+modified: 1658115948723
 created: 1657947954592
 url: "{{ _.URL }}"
-name: "200"
+name: login
 description: ""
 method: POST
 body:
   mimeType: application/json
-  text: |-
-    {
-    	"email": "{{ _.userLogin }}",
-    	"password": "{{ _.userPassword }}"
-    }
+  text: "{% response 'raw', 'req_5e1b78adcf1d409c959fdd8a9bbcc494', '', 'never',
+    60 %}"
 parameters: []
 headers:
   - name: Content-Type
