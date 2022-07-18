@@ -1,16 +1,21 @@
 _id: req_0cf498f18aa3463cb3746ac65211918a
 type: Request
 parentId: fld_6f48ef3766984faeb5d92a9d4201b2c6
-modified: 1658050844063
+modified: 1658113859987
 created: 1658050117178
 url: "{{ _.URL }}/{% response 'body', 'req_525ba4074d9448139ca2d5a2fa10103a',
-  'b64::JC5pZA==::46b', 'never', 60 %}"
+  'b64::JC5pZA==::46b', 'always', 60 %}"
 name: 200 get by id
 description: ""
 method: GET
-body: {}
+body:
+  mimeType: application/json
+  text: ""
 parameters: []
-headers: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9c791b64dc0f46ce9ce6d9ad970da394
 authentication:
   type: bearer
   token: "{{ _.token }}"

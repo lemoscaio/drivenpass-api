@@ -1,20 +1,17 @@
-_id: req_26d99b4ad8a749c5bb27cb0463b95cb3
+_id: req_d4a75f15f6a34b25b3f4b5d12623e8f5
 type: Request
-parentId: fld_041e1d40220e4546b99f6590bade1f0b
-modified: 1658057406577
-created: 1657965624878
+parentId: fld_db2dcf8cbd2f403d8b3c3433e27a578c
+modified: 1658109532303
+created: 1658109527327
 url: "{{ _.URL }}"
-name: 200 get all
+name: New Request
 description: ""
 method: GET
 body: {}
 parameters: []
 headers: []
-authentication:
-  type: bearer
-  token: "{{ _.token }}"
-  prefix: Bearer
-metaSortKey: -1657965624878
+authentication: {}
+metaSortKey: -1658109527327
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

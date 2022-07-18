@@ -1,10 +1,10 @@
-_id: req_26d99b4ad8a749c5bb27cb0463b95cb3
+_id: req_d6f7730eaa4541acb9e820b2c5fc6b37
 type: Request
-parentId: fld_041e1d40220e4546b99f6590bade1f0b
-modified: 1658057406577
-created: 1657965624878
-url: "{{ _.URL }}"
-name: 200 get all
+parentId: fld_04b564fe2a324207949f88e16f5120d4
+modified: 1658109506504
+created: 1658054652005
+url: "{{ _.URL }}?label=wireless"
+name: case test
 description: ""
 method: GET
 body: {}
@@ -14,7 +14,8 @@ authentication:
   type: bearer
   token: "{{ _.token }}"
   prefix: Bearer
-metaSortKey: -1657965624878
+  disabled: false
+metaSortKey: -1657965624909.25
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
