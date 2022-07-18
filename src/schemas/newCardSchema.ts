@@ -4,7 +4,7 @@ import Joi from "joi"
 export const newCardSchema = Joi.object<CreateCardData>({
   cardholder: Joi.string().required(),
   expirationDate: Joi.string().length(5).required(),
-  isVirtual: Joi.boolean().required(),
+  isVirtual: Joi.boolean().strict().required(),
   label: Joi.string().required(),
   number: Joi.string().required(),
   securityCode: Joi.string().length(3).required(),

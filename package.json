@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "commonjs",
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "ts-node -r tsconfig-paths/register ./src/index.ts",
     "dev": "ts-node-dev --clear --respawn --transpile-only -r tsconfig-paths/register src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
