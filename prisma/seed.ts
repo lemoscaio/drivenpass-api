@@ -22,7 +22,7 @@ const main = async () => {
     {
       userId: 1,
       title: "Notas do Caio",
-      body: "segredos do lucax",
+      body: "segredos do Caio",
     },
   ]
   const cards = [
@@ -30,7 +30,7 @@ const main = async () => {
       userId: 1,
       label: "Conta do Caio",
       number: "1111 1111 1111 1111",
-      cardholder: "LUCAX A RODRIUGES",
+      cardholder: "CAIO A LEMOS",
       securityCode: encrypt.cryptr.encryptPassword("123"),
       password: encrypt.cryptr.encryptPassword("12334"),
       expirationDate: "12/20",
