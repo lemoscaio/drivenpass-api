@@ -5,7 +5,7 @@ const prisma = new PrismaClient()
 const main = async () => {
   const users = [
     {
-      email: "caio@gmail.com",
+      email: "caio2@gmail.com",
       password: encrypt.cryptr.encryptPassword("1233456"),
     },
   ]

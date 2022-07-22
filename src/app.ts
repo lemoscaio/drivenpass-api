@@ -9,6 +9,7 @@ import { handleError } from "@middlewares/errorhandler"
 dotenv.config()
 
 const App = express()
+
 App.use(express.json())
 App.use(cors())
 
@@ -17,7 +18,4 @@ App.use(router)
 
 App.use(handleError)
 
-const port = +process.env.PORT || 4000
-App.listen(port, () => {
-  console.log(`Server online and listening on port ${port}`)
-})
+export default App

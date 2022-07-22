@@ -3,6 +3,7 @@
     "esModuleInterop": true,
     "module": "CommonJS",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
