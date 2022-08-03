@@ -1,5 +1,0 @@
--- AlterTable
-ALTER TABLE "cards" ALTER COLUMN "securityCode" SET DATA TYPE VARCHAR(254);
-
--- AlterTable
-ALTER TABLE "users" ALTER COLUMN "password" SET DATA TYPE VARCHAR(254);
